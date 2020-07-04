@@ -12,24 +12,59 @@ header {
   background-color: skyblue;
 }
 
-header div {
+header > div {
   width: 80%;
   height: 100%;
   margin: 0 auto;
   background-color: tomato;
 }
 
-header div > h1 {
+header > div > h1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   line-height: 100%;
 }
 
-header div > .utils .lang ul {
+header div > .utils {
+  position: relative;
+}
+
+header div > .utils > .lang > ul > li,
+header div > .utils > .util > a,
+h1 {
+  line-height: 100%;
+}
+
+header div > .utils .util,
+header div > .utils .lang,
+header div > .utils .lang ul,
+header div > .utils .lang ul li {
   display: inline-block;
 }
 
-header div > .utils .lang ul li {
+header div > .utils > .util {
+  position: absolute;
   display: inline-block;
+  right: 0;
+}
+.all,
+h2 {
+  display: none;
+}
+
+header .nav ul {
+  position: absolute;
+  top: 5rem;
+  width: 80%;
+  text-align: center;
+}
+
+header .nav ul li {
+  display: inline-block;
+  padding: 0 2rem 0 0;
+}
+
+header .nav ul li a {
+  font-size: 0.8rem;
 }
