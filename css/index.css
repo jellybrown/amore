@@ -6,6 +6,7 @@ body {
   font-size: 1rem;
 }
 
+/* 헤더영역 */
 header {
   width: 100%;
   height: 7rem;
@@ -13,7 +14,7 @@ header {
 }
 
 header > div {
-  width: 80%;
+  width: 75%;
   height: 100%;
   margin: 0 auto;
   background-color: tomato;
@@ -21,6 +22,7 @@ header > div {
 
 header > div > h1 {
   position: absolute;
+  top: 1.75rem;
   left: 50%;
   transform: translateX(-50%);
   line-height: 100%;
@@ -28,19 +30,34 @@ header > div > h1 {
 
 header div > .utils {
   position: relative;
+  top: 1.75rem;
 }
 
-header div > .utils > .lang > ul > li,
-header div > .utils > .util > a,
-h1 {
-  line-height: 100%;
+header div > .utils > .lang,
+header div > .utils a {
+  font-size: 0.8rem;
+  vertical-align: top;
 }
 
-header div > .utils .util,
+header div > h1 {
+  font-size: 0;
+}
+
+header div > .utils .util > a,
 header div > .utils .lang,
 header div > .utils .lang ul,
-header div > .utils .lang ul li {
+header div > .utils .lang ul li,
+header div > h1 {
   display: inline-block;
+}
+
+header div > .utils > .lang > ul,
+header div > .utils > .util > a,
+header div > h1 {
+  line-height: 100%;
+  vertical-align: top;
+  font-size: 0.67rem;
+  color: #fff;
 }
 
 header div > .utils > .util {
@@ -48,6 +65,11 @@ header div > .utils > .util {
   display: inline-block;
   right: 0;
 }
+
+header div > .utils .lang ul li {
+  margin: 0 0.7rem 0 0;
+}
+
 .all,
 h2 {
   display: none;
@@ -56,7 +78,7 @@ h2 {
 header .nav ul {
   position: absolute;
   top: 5rem;
-  width: 80%;
+  width: 75%;
   text-align: center;
 }
 
@@ -67,4 +89,15 @@ header .nav ul li {
 
 header .nav ul li a {
   font-size: 0.8rem;
+  color: #fff;
+}
+
+header div .utils .search:before {
+  content: "\e97a";
+  font-family: "xeicon";
+}
+
+header div .utils .search > span {
+  position: absolute;
+  left: -4000%;
 }
