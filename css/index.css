@@ -10,14 +10,14 @@ body {
 header {
   width: 100%;
   height: 7rem;
-  background-color: skyblue;
+  background-color: #062c5e;
+  opacity: 20%;
 }
 
 header > div {
-  width: 75%;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
-  background-color: tomato;
 }
 
 header > div > h1 {
@@ -64,10 +64,30 @@ header div > .utils > .util {
   position: absolute;
   display: inline-block;
   right: 0;
+  padding-right: 0.6rem;
+}
+
+header div > .utils > .util > a {
+  margin: 0 1.5rem 0 0;
+}
+
+header div .utils > .util > a:first-child:before {
+  content: "";
+  width: 1px;
+  height: 0.6rem;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 2.8rem;
+  top: 0;
 }
 
 header div > .utils .lang ul li {
   margin: 0 0.7rem 0 0;
+}
+
+header div > .utils .lang ul li:first-child {
+  content: "";
+  border-bottom: 1px solid #fff;
 }
 
 .all,
@@ -78,7 +98,7 @@ h2 {
 header .nav ul {
   position: absolute;
   top: 5rem;
-  width: 75%;
+  width: 80%;
   text-align: center;
 }
 
@@ -100,4 +120,70 @@ header div .utils .search:before {
 header div .utils .search > span {
   position: absolute;
   left: -4000%;
+}
+
+/* 슬라이드 영역 */
+.visual_slide {
+  height: 100vh;
+  background: url(../images/AP_Post_Covid19_Corp_Campaign_3_PC_1.jpg) no-repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.visual_slide > .prev:before,
+.visual_slide > .next:before {
+  font-family: "xeicon";
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50vh;
+}
+
+.visual_slide > .prev:before {
+  content: "\e93c";
+  left: 0;
+  margin-left: 0.5rem;
+}
+.visual_slide > .next:before {
+  content: "\e93f";
+  right: 0;
+  margin-right: 0.5rem;
+}
+
+.visual_slide > .controller {
+  width: 100%;
+  height: 4.25rem;
+
+  background-color: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+}
+
+.visual_slide > .controller > div {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.visual_slide > .controller > div > ul {
+  margin: 0 5.4rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.visual_slide > .controller > div > ul > li {
+  color: #000;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.visual_slide > .controller > div > ul > li > a {
+  white-space: nowrap;
 }
