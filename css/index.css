@@ -196,10 +196,11 @@ header div .utils .search > span {
 /* 뉴스영역 */
 .home_news {
   height: 29.5rem;
-  background-color: yellowgreen;
+
   position: absolute;
   top: 100vh;
   width: 80%;
+
   left: 50%;
   transform: translateX(-50%);
 }
@@ -268,11 +269,27 @@ header div .utils .search > span {
   top: 200vh;
 }
 
+.introduce > div {
+  width: 100%;
+  height: 80%;
+}
+
+.introduce div > h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 100%;
+  padding: 6rem 0 0 0;
+}
+
 .introduce div > ul {
+  width: 75%;
   position: absolute;
-  top: 50%;
+  bottom: 6rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
 }
 
 .introduce div > ul > li {
@@ -284,10 +301,34 @@ header div .utils .search > span {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
-
-  font-size: 5rem;
+  transform: translateY(-60%);
+  font-size: 4rem;
+  color: #fff;
 }
-.introduce div > ul > li > .no {
-  font-size: 2.5rem;
+
+.introduce div > ul > li:nth-child(1) > span {
+  left: 20%;
+}
+.introduce div > ul > li > span.no {
+  font-size: 1.8rem;
+  top: 55%;
+  left: 20%;
+}
+
+.introduce div > ul > li > span.num {
+  left: 55%;
+}
+
+.introduce div > ul > li:nth-child(3) > span {
+  left: 35%;
+}
+.introduce div > ul > li:nth-child(4) > span {
+  left: 20%;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 9rem;
+  background-color: olivedrab;
 }
