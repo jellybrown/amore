@@ -1,5 +1,7 @@
 html {
+  height: 300vh;
   font-size: 20px;
+  font-family: "Noto Serif", "Nanum Gothic", serif;
 }
 
 body {
@@ -91,7 +93,8 @@ header div > .utils .lang ul li:first-child {
 }
 
 .all,
-h2 {
+.nav > h2,
+.visual_slide > h2 {
   display: none;
 }
 
@@ -125,7 +128,9 @@ header div .utils .search > span {
 /* 슬라이드 영역 */
 .visual_slide {
   height: 100vh;
-  background: url(../images/AP_Post_Covid19_Corp_Campaign_3_PC_1.jpg) no-repeat;
+  background: url(../images/AP_Post_Covid19_Corp_Campaign_3_PC_1.jpg) no-repeat
+    center;
+  background-size: 100% auto;
   position: absolute;
   top: 0;
   width: 100%;
@@ -186,4 +191,103 @@ header div .utils .search > span {
 
 .visual_slide > .controller > div > ul > li > a {
   white-space: nowrap;
+}
+
+/* 뉴스영역 */
+.home_news {
+  height: 29.5rem;
+  background-color: yellowgreen;
+  position: absolute;
+  top: 100vh;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home_news div > h2 {
+  padding: 5.25rem 0 3rem 0;
+  font-size: 1.3rem;
+  color: #222222;
+}
+
+.home_news div .list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home_news div .list ul li {
+  font-size: 0.85rem;
+  display: inline-block;
+  width: 25%;
+  padding: 0 1.15rem 0 0;
+  box-sizing: border-box;
+}
+
+.home_news div .list ul li img {
+  width: 100%;
+  padding: 0 0 0.85rem 0;
+}
+.home_news div .list ul li div {
+  width: 12rem;
+  line-height: 1.15rem;
+  height: 1.15rem;
+  padding: 0 0 0 0.6rem;
+}
+
+.home_news div {
+  position: relative;
+}
+
+.home_news div > a {
+  border: 1px solid #999;
+  border-radius: 21px;
+  padding: 0.45rem 1.75rem 0.45rem 1.2rem;
+  position: absolute;
+  top: 5.25rem;
+  right: 0;
+  font-size: 0.6rem;
+  color: #444444;
+  line-height: 1.2rem;
+  margin: 0 1.15rem 0 0;
+}
+.home_news div > a:after {
+  content: "\e93f";
+  font-family: "xeicon";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1.2);
+  margin-left: 0.25rem;
+  color: #444444;
+}
+
+/* 소개 영역 */
+.introduce {
+  width: 100%;
+  height: 26rem;
+  background-color: #005295;
+  position: absolute;
+  top: 200vh;
+}
+
+.introduce div > ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.introduce div > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+.introduce div > ul > li > span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  font-size: 5rem;
+}
+.introduce div > ul > li > .no {
+  font-size: 2.5rem;
 }
