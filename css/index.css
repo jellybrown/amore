@@ -132,13 +132,10 @@ header div .utils .search > span {
   height: 100vh;
   width: 100%;
 }
-.visual_slide > div,
 .visual_slide > div {
   width: 100%;
   height: 100%;
-  background: url(../images/AP_Post_Covid19_Corp_Campaign_3_PC_1.jpg) no-repeat
-    center;
-  background-size: 100% auto;
+
   width: 100%;
   z-index: -2;
 }
@@ -197,6 +194,40 @@ header div .utils .search > span {
 
 .visual_slide > div > .controller > div > ul > li > a {
   white-space: nowrap;
+}
+
+/* 이미지 슬라이드 */
+.visual_slide > div > .slide {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.visual_slide > div > .slide > ul {
+  height: 100%;
+  width: 100%;
+  margin-left: 0;
+}
+.visual_slide > div > .slide > ul > li {
+  height: 100%;
+  width: 100%;
+}
+.visual_slide > div > .slide > ul > li:nth-child(1) {
+  background: url(../images/AP_Post_Covid19_Corp_Campaign_3_PC_1.jpg) no-repeat
+    center;
+  background-size: 100% auto;
+}
+.visual_slide > div > .slide > ul > li:nth-child(2) {
+  background: url(../images/image_12_13.jpg) no-repeat center;
+  background-size: 100% auto;
+}
+.visual_slide > div > .slide > ul > li:nth-child(3) {
+  background: url(../images/image_28_1.jpg) no-repeat center;
+  background-size: 100% auto;
+}
+.visual_slide > div > .slide > ul > li:nth-child(4) {
+  background: url(../images/image_191205.png) no-repeat center;
+  background-size: 100% auto;
 }
 
 /* 뉴스영역 */
