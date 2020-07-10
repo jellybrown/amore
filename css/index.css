@@ -12,9 +12,13 @@ body {
 header {
   width: 100%;
   height: 7rem;
-  background-color: #062c5e;
-  opacity: 20%;
+
+  opacity: 100%;
   position: absolute;
+  transition: background-color 0.5s;
+}
+header:hover {
+  background-color: #062c5e;
 }
 
 header > div {
@@ -99,15 +103,18 @@ header div > .utils .lang ul li:first-child {
   position: absolute;
   left: -4000%;
 }
+header .nav {
+  width: 100%;
+}
 
-header .nav ul {
+header .nav > nav > ul {
   position: absolute;
   top: 5rem;
-  width: 80%;
+  width: 100%;
   text-align: center;
 }
 
-header .nav ul li {
+header .nav > nav > ul li {
   display: inline-block;
   padding: 0 2rem 0 0;
 }
@@ -125,6 +132,100 @@ header div .utils .search:before {
 header div .utils .search > span {
   position: absolute;
   left: -4000%;
+}
+
+/* 헤더영역: 드로우 메뉴 */
+
+.draw_menu {
+  display: none;
+  width: 100%;
+  height: 372px;
+  background-color: #fff;
+  opacity: 80%;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 5;
+}
+
+.draw_menu.on {
+  display: block;
+  width: 100%;
+  height: 372px;
+}
+
+.draw_menu .left {
+  background-color: #f5f5f5;
+  width: 40%;
+  height: 100%;
+  padding: 3.2em 50px 3.333rem calc(8rem + 10px);
+  box-sizing: border-box;
+  float: left;
+}
+
+.draw_menu .left > h2 {
+  text-align: left;
+  line-height: 100%;
+  padding: 0 0 1rem 0;
+  color: #000;
+}
+
+.draw_menu .left > p {
+  line-height: 1.2rem;
+  color: #767676;
+  text-align: left;
+}
+
+.draw_menu .left > a {
+  color: #444444;
+  font-size: 0.6rem;
+  float: left;
+  margin: 1rem 0 0 0;
+}
+
+.draw_menu .left > a:after {
+  content: "\e93e";
+  font-family: "xeicon";
+  padding-left: 0.2rem;
+}
+
+.draw_menu > ul {
+  width: 60%;
+  float: left;
+  padding: 3.2em 50px 3.33333em 10px;
+  box-sizing: border-box;
+}
+
+.draw_menu > ul li {
+  display: block;
+  padding: 0 0 1rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  color: #616161;
+}
+
+.draw_menu .right {
+  width: 25%;
+  position: absolute;
+  top: 15%;
+  left: 60%;
+}
+
+.draw_menu .right img {
+  width: 100%;
+}
+
+.draw_menu .right p {
+  display: block;
+  color: #616161;
+  line-height: 1.2rem;
+  padding: 0.5rem 0 0 0;
+  text-align: left;
+  width: 100%;
+}
+
+.draw_menu p {
+  font-size: 0.7rem;
 }
 
 /* 슬라이드 영역 */
@@ -196,7 +297,7 @@ header div .utils .search > span {
   white-space: nowrap;
 }
 
-/* 이미지 슬라이드 */
+/* 슬라이드 영역: 이미지 슬라이드 */
 .visual_slide > div > .slide {
   overflow: hidden;
   height: 100%;
