@@ -114,7 +114,7 @@ header .nav > nav > ul {
   text-align: center;
 }
 
-header .nav > nav > ul li {
+header .nav > nav > ul > li {
   display: inline-block;
   padding: 0 2rem 0 0;
 }
@@ -148,7 +148,7 @@ header div .utils .search > span {
   z-index: 5;
 }
 
-.draw_menu.on {
+.header_menu.on > .draw_menu {
   display: block;
   width: 100%;
   height: 372px;
@@ -196,7 +196,7 @@ header div .utils .search > span {
   box-sizing: border-box;
 }
 
-.draw_menu > ul li {
+.draw_menu > ul > li {
   display: block;
   padding: 0 0 1rem 1rem;
   text-align: left;

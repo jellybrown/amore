@@ -1,8 +1,23 @@
+const menus = document.querySelector(".menus");
 const header = document.querySelector(".header_menu");
-const draw = document.querySelector(".draw_menu");
-function over() {
-  draw.classList.add("on");
-  console.log("실행");
+const on = document.querySelector(".header_menu.on");
+const li = document.querySelector(".on");
+const draw = document.querySelectorAll(".draw_menu");
+
+function over(e) {
+  if (e.target.classList.contains("header_menu")) {
+    console.log(e.target);
+
+    e.target.classList.add("on");
+  }
 }
 
-header.addEventListener("mouseover", over);
+function out() {
+  if (li.classList.contains("on")) {
+    li.classList.remove("on");
+  }
+}
+
+menus.addEventListener("mouseover", over);
+
+li.addEventListener("mouseout", out);
