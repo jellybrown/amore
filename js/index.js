@@ -21,11 +21,13 @@ const slide = (_) => {
 };
 
 prevEvent = () => {
-  const selectSlide = document.querySelector(".slide_ul");
+  const wrap = one(".slide"); //slide 선택
+  const target = wrap.children[0]; // ul 선택
+  const len = target.children.length; //li의 갯수
 
-  selectSlide.style.marginLeft += `100%`;
-
-  console.log("click~");
+  let mar = target.getAttribute(marginLeft);
+  pos = (pos + 1) % len;
+  target.style.marginLeft = `${mar + 100}%`;
 };
 
 prev.addEventListener("click", prevEvent);
