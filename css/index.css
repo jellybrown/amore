@@ -12,22 +12,23 @@ body {
 header {
   width: 100%;
   height: 7rem;
-
+  z-index: 10;
   opacity: 100%;
   position: absolute;
   transition: background-color 0.5s;
 }
+
 header:hover {
   background-color: #062c5e;
 }
 
-header > div {
+header>div {
   width: 80%;
   height: 100%;
   margin: 0 auto;
 }
 
-header > div > h1 {
+header>div>h1 {
   position: absolute;
   top: 1.75rem;
   left: 50%;
@@ -35,50 +36,50 @@ header > div > h1 {
   line-height: 100%;
 }
 
-header div > .utils {
+header div>.utils {
   position: relative;
   top: 1.75rem;
 }
 
-header div > .utils > .lang,
-header div > .utils a {
+header div>.utils>.lang,
+header div>.utils a {
   font-size: 0.8rem;
   vertical-align: top;
 }
 
-header div > h1 {
+header div>h1 {
   font-size: 0;
 }
 
-header div > .utils .util > a,
-header div > .utils .lang,
-header div > .utils .lang ul,
-header div > .utils .lang ul li,
-header div > h1 {
+header div>.utils .util>a,
+header div>.utils .lang,
+header div>.utils .lang ul,
+header div>.utils .lang ul li,
+header div>h1 {
   display: inline-block;
 }
 
-header div > .utils > .lang > ul,
-header div > .utils > .util > a,
-header div > h1 {
+header div>.utils>.lang>ul,
+header div>.utils>.util>a,
+header div>h1 {
   line-height: 100%;
   vertical-align: top;
   font-size: 0.67rem;
   color: #fff;
 }
 
-header div > .utils > .util {
+header div>.utils>.util {
   position: absolute;
   display: inline-block;
   right: 0;
   padding-right: 0.6rem;
 }
 
-header div > .utils > .util > a {
+header div>.utils>.util>a {
   margin: 0 1.5rem 0 0;
 }
 
-header div .utils > .util > a:first-child:before {
+header div .utils>.util>a:first-child:before {
   content: "";
   width: 1px;
   height: 0.6rem;
@@ -88,33 +89,34 @@ header div .utils > .util > a:first-child:before {
   top: 0;
 }
 
-header div > .utils .lang ul li {
+header div>.utils .lang ul li {
   margin: 0 0.7rem 0 0;
 }
 
-header div > .utils .lang ul li:first-child {
+header div>.utils .lang ul li:first-child {
   content: "";
   border-bottom: 1px solid #fff;
 }
 
 .all,
-.nav > h2,
-.visual_slide > h2 {
+.nav>h2,
+.visual_slide>h2 {
   position: absolute;
   left: -4000%;
 }
+
 header .nav {
   width: 100%;
 }
 
-header .nav > nav > ul {
+header .nav>nav>ul {
   position: absolute;
   top: 5rem;
   width: 100%;
   text-align: center;
 }
 
-header .nav > nav > ul > li {
+header .nav>nav>ul>li {
   display: inline-block;
   padding: 0 2rem 0 0.5rem;
 }
@@ -125,11 +127,11 @@ header .nav ul li a {
   position: relative;
 }
 
-header .nav > nav > ul > li:hover > a {
+header .nav>nav>ul>li:hover>a {
   color: #c5deff;
 }
 
-header .nav > nav > ul > li:hover > a:after {
+header .nav>nav>ul>li:hover>a:after {
   content: "";
   position: absolute;
   background-color: #92b4e2;
@@ -144,7 +146,7 @@ header div .utils .search:before {
   font-family: "xeicon";
 }
 
-header div .utils .search > span {
+header div .utils .search>span {
   position: absolute;
   left: -4000%;
 }
@@ -160,10 +162,19 @@ header div .utils .search > span {
   position: absolute;
   top: 40px;
   left: 0;
-  z-index: 5;
+
 }
 
-.header_menu.on > .draw_menu {
+.header_menu {
+  z-index: 40;
+
+}
+
+.header_menu a {
+  z-index: 20;
+}
+
+.header_menu.on>.draw_menu {
   display: block;
   width: 100%;
   height: 372px;
@@ -178,40 +189,40 @@ header div .utils .search > span {
   float: left;
 }
 
-.draw_menu .left > h2 {
+.draw_menu .left>h2 {
   text-align: left;
   line-height: 100%;
   padding: 0 0 1rem 0;
   color: #000;
 }
 
-.draw_menu .left > p {
+.draw_menu .left>p {
   line-height: 1.2rem;
   color: #767676;
   text-align: left;
 }
 
-.draw_menu .left > a {
+.draw_menu .left>a {
   color: #444444;
   font-size: 0.6rem;
   float: left;
   margin: 1rem 0 0 0;
 }
 
-.draw_menu .left > a:after {
+.draw_menu .left>a:after {
   content: "\e93e";
   font-family: "xeicon";
   padding-left: 0.2rem;
 }
 
-.draw_menu > ul {
+.draw_menu>ul {
   width: 60%;
   float: left;
   padding: 3.2em 50px 3.33333em 10px;
   box-sizing: border-box;
 }
 
-.draw_menu > ul > li {
+.draw_menu>ul>li {
   display: block;
   padding: 0 0 1rem 1rem;
   text-align: left;
@@ -243,7 +254,7 @@ header div .utils .search > span {
   font-size: 0.7rem;
 }
 
-.draw_menu > .brand_img {
+.draw_menu>.brand_img {
   float: right;
   width: 60%;
   display: flex;
@@ -252,7 +263,7 @@ header div .utils .search > span {
   align-items: center;
 }
 
-.draw_menu > .brand_img > li {
+.draw_menu>.brand_img>li {
   float: left;
 
   width: 28%;
@@ -263,7 +274,7 @@ header div .utils .search > span {
   height: 120px;
 }
 
-.draw_menu > .brand_img li > a {
+.draw_menu>.brand_img li>a {
   display: block;
   text-align: center;
 
@@ -274,7 +285,7 @@ header div .utils .search > span {
   color: #000;
 }
 
-.draw_menu > .brand_img li:last-child > a:after {
+.draw_menu>.brand_img li:last-child>a:after {
   content: "\e93f";
   font-family: "xeicon";
   position: absolute;
@@ -287,16 +298,20 @@ header div .utils .search > span {
   height: 100vh;
   width: 100%;
 }
-.visual_slide > div {
+
+.visual_slide>div {
   width: 100%;
   height: 100%;
 
   width: 100%;
-  z-index: -2;
+
 }
 
-.visual_slide > div > .prev:before,
-.visual_slide > div > .next:before {
+visual_slide>div>#prev,
+visual_slide>div>#next {}
+
+.visual_slide>div>#prev:before,
+.visual_slide>div>#next:before {
   font-family: "xeicon";
   color: #fff;
   border: 1px solid #fff;
@@ -304,20 +319,22 @@ header div .utils .search > span {
   border-radius: 50%;
   position: absolute;
   top: 50vh;
+  z-index: 200;
 }
 
-.visual_slide > div > .prev:before {
+.visual_slide>div>#prev:before {
   content: "\e93c";
   left: 0;
   margin-left: 0.5rem;
 }
-.visual_slide > div > .next:before {
+
+.visual_slide>div>#next:before {
   content: "\e93f";
   right: 0;
   margin-right: 0.5rem;
 }
 
-.visual_slide > div > .controller {
+.controller {
   width: 100%;
   height: 4.25rem;
 
@@ -326,7 +343,7 @@ header div .utils .search > span {
   bottom: 0;
 }
 
-.visual_slide > div > .controller > div {
+.controller>div {
   position: absolute;
   width: 100%;
   text-align: center;
@@ -334,56 +351,88 @@ header div .utils .search > span {
   transform: translateY(-50%);
 }
 
-.visual_slide > div > .controller > div > ul {
+.controller>div>ul {
   margin: 0 5.4rem;
   box-sizing: border-box;
+  display: flex;
   display: flex;
   justify-content: space-between;
 }
 
-.visual_slide > div > .controller > div > ul > li {
+.controller>div>ul>li {
   color: #000;
   font-size: 0.9rem;
   display: inline-block;
 }
 
-.visual_slide > div > .controller > div > ul > li > a {
+.controller>div>ul>li>a {
   white-space: nowrap;
+  color: #b5b5b5;
+  padding: 1.4rem 0;
+
+
 }
 
+.controller>div>ul>li.on {
+  color: #000;
+  border-bottom: 3px solid #000;
+
+}
+
+.controller>div>ul>li.on>a {
+  color: #000;
+}
+
+
 /* 슬라이드 영역: 이미지 슬라이드 */
-.visual_slide > div > .slide {
-  overflow: hidden;
+.visual_slide>div>.slide {
+
   height: 100%;
   width: 100%;
 }
 
-.visual_slide > div > .slide > ul {
+.visual_slide>div>.slide>ul {
   height: 100%;
   width: 100%;
   margin-left: 0;
 }
-.visual_slide > div > .slide > ul > li {
+
+.visual_slide>div>.slide>ul>li {
   height: 100%;
   width: 100%;
 }
-.visual_slide > div > .slide > ul > li:nth-child(1) {
-  background: url(../images/AP_Post_Covid19_Corp_Campaign_3_PC_1.jpg) no-repeat
-    center;
-  background-size: 100% auto;
+
+.slide {
+  position: relative;
+  width: 100%;
+
+
 }
-.visual_slide > div > .slide > ul > li:nth-child(2) {
-  background: url(../images/image_12_13.jpg) no-repeat center;
-  background-size: 100% auto;
+
+.slide_ul {
+  position: absolute;
+  width: 100%;
+
 }
-.visual_slide > div > .slide > ul > li:nth-child(3) {
-  background: url(../images/image_28_1.jpg) no-repeat center;
-  background-size: 100% auto;
+
+.slide_ul.animated {
+  transition: all 0.3s;
 }
-.visual_slide > div > .slide > ul > li:nth-child(4) {
-  background: url(../images/image_191205.png) no-repeat center;
-  background-size: 100% auto;
+
+.img_slide {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -40;
+  overflow: hidden;
 }
+
+.img_slide img {
+  width: 100%;
+
+}
+
 
 /* 뉴스영역 */
 .home_news {
@@ -392,7 +441,8 @@ header div .utils .search > span {
   margin: 0 auto;
   padding: 0 0 3rem 0;
 }
-.home_news div > h2 {
+
+.home_news div>h2 {
   padding: 5.25rem 0 3rem 0;
   font-size: 1.3rem;
   color: #222222;
@@ -415,6 +465,7 @@ header div .utils .search > span {
   width: 100%;
   padding: 0 0 0.85rem 0;
 }
+
 .home_news div .list ul li div {
   width: 12rem;
   line-height: 1.15rem;
@@ -426,7 +477,7 @@ header div .utils .search > span {
   position: relative;
 }
 
-.home_news div > a {
+.home_news div>a {
   border: 1px solid #999;
   border-radius: 21px;
   padding: 0.45rem 1.75rem 0.45rem 1.2rem;
@@ -438,7 +489,8 @@ header div .utils .search > span {
   line-height: 1.2rem;
   margin: 0 1.15rem 0 0;
 }
-.home_news div > a:after {
+
+.home_news div>a:after {
   content: "\e93f";
   font-family: "xeicon";
   position: absolute;
@@ -455,13 +507,13 @@ header div .utils .search > span {
   background-color: #005295;
 }
 
-.introduce > div {
+.introduce>div {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.introduce div > h2 {
+.introduce div>h2 {
   color: #fff;
   font-size: 1.5rem;
   text-align: center;
@@ -469,7 +521,7 @@ header div .utils .search > span {
   padding: 6rem 0 0 0;
 }
 
-.introduce div > ul {
+.introduce div>ul {
   width: 75%;
   position: absolute;
   bottom: 5.75rem;
@@ -479,12 +531,12 @@ header div .utils .search > span {
   justify-content: space-around;
 }
 
-.introduce div > ul > li {
+.introduce div>ul>li {
   display: inline-block;
   position: relative;
 }
 
-.introduce div > ul > li > span {
+.introduce div>ul>li>span {
   position: absolute;
   top: 50%;
   left: 0;
@@ -493,23 +545,25 @@ header div .utils .search > span {
   color: #fff;
 }
 
-.introduce div > ul > li:nth-child(1) > span {
+.introduce div>ul>li:nth-child(1)>span {
   left: 20%;
 }
-.introduce div > ul > li > span.no {
+
+.introduce div>ul>li>span.no {
   font-size: 1.8rem;
   top: 55%;
   left: 20%;
 }
 
-.introduce div > ul > li > span.num {
+.introduce div>ul>li>span.num {
   left: 55%;
 }
 
-.introduce div > ul > li:nth-child(3) > span {
+.introduce div>ul>li:nth-child(3)>span {
   left: 35%;
 }
-.introduce div > ul > li:nth-child(4) > span {
+
+.introduce div>ul>li:nth-child(4)>span {
   left: 20%;
 }
 
@@ -523,20 +577,21 @@ footer {
   margin: 7rem 0 0 0;
 }
 
-footer .footer_menu > h2 {
+footer .footer_menu>h2 {
   position: absolute;
   left: -4000%;
 }
 
-footer > div {
+footer>div {
   position: relative;
 }
 
-footer > div > p {
+footer>div>p {
   font-size: 0.6rem;
   line-height: 100%;
 }
-footer > div > a {
+
+footer>div>a {
   display: inline-block;
 
   font-size: 0.5rem;
@@ -548,7 +603,8 @@ footer > div > a {
   top: -1rem;
   background-color: #fff;
 }
-footer > div > a > span {
+
+footer>div>a>span {
   display: inline-block;
   position: absolute;
   top: 60%;
@@ -557,7 +613,7 @@ footer > div > a > span {
   color: #707070;
 }
 
-footer > div > a:before {
+footer>div>a:before {
   content: "\e946";
   font-family: "xeicon";
   position: absolute;
@@ -567,18 +623,18 @@ footer > div > a:before {
   color: #707070;
 }
 
-footer .footer_menu > ul {
+footer .footer_menu>ul {
   padding: 2.2rem 0 0 0;
 }
 
-footer .footer_menu > ul > li {
+footer .footer_menu>ul>li {
   display: inline-block;
   font-size: 0.68rem;
   padding-right: 1rem;
   position: relative;
 }
 
-footer .footer_menu > ul > li:after {
+footer .footer_menu>ul>li:after {
   content: "";
   width: 1px;
   height: 10px;
@@ -588,21 +644,23 @@ footer .footer_menu > ul > li:after {
   right: 8px;
 }
 
-footer .footer_menu > ul > li:last-child:after {
+footer .footer_menu>ul>li:last-child:after {
   display: none;
 }
 
-footer div > p:nth-of-type(1) {
+footer div>p:nth-of-type(1) {
   padding: 1.45rem 0 1.15rem 0;
 }
-footer div > p:nth-of-type(2) {
+
+footer div>p:nth-of-type(2) {
   padding: 1.2rem 0 1.5rem 0;
 }
 
-footer div > .social > .facebook img {
+footer div>.social>.facebook img {
   width: 11px;
   margin-right: 1rem;
 }
-footer div > .social > .linkedin img {
+
+footer div>.social>.linkedin img {
   width: 23px;
 }
