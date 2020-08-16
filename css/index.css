@@ -75,28 +75,11 @@ header div>.utils>.util {
   padding-right: 0.6rem;
 }
 
-header div>.utils>.util>a {
-  margin: 0 1.5rem 0 0;
-}
-
-header div .utils>.util>a:first-child:before {
-  content: "";
-  width: 1px;
-  height: 0.6rem;
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 2.8rem;
-  top: 0;
-}
-
 header div>.utils .lang ul li {
   margin: 0 0.7rem 0 0;
 }
 
-header div>.utils .lang ul li:first-child {
-  content: "";
-  border-bottom: 1px solid #fff;
-}
+
 
 .all,
 .nav>h2,
@@ -131,25 +114,23 @@ header .nav>nav>ul>li:hover>a {
   color: #c5deff;
 }
 
-header .nav>nav>ul>li:hover>a:after {
-  content: "";
-  position: absolute;
-  background-color: #92b4e2;
-  width: 100%;
-  height: 4px;
-  bottom: -13.5px;
-  left: 0;
+header div .utils>.util>.search {
+  display: block;
+  position: relative;
+  color: transparent
 }
 
-header div .utils .search:before {
+header div .utils>.util>.search:after {
+  display: inline-block;
   content: "\e97a";
   font-family: "xeicon";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+
 }
 
-header div .utils .search>span {
-  position: absolute;
-  left: -4000%;
-}
 
 /* 헤더영역: 드로우 메뉴 */
 
@@ -231,10 +212,10 @@ header div .utils .search>span {
 }
 
 .draw_menu .right {
-  width: 25%;
+  width: 20%;
   position: absolute;
   top: 15%;
-  left: 60%;
+  left: 65%;
 }
 
 .draw_menu .right img {
@@ -248,6 +229,7 @@ header div .utils .search>span {
   padding: 0.5rem 0 0 0;
   text-align: left;
   width: 100%;
+
 }
 
 .draw_menu p {
@@ -314,25 +296,37 @@ visual_slide>div>#next {}
 .visual_slide>div>#next:before {
   font-family: "xeicon";
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid rgb(175, 175, 175);
   padding: 0.5rem;
   border-radius: 50%;
   position: absolute;
   top: 50vh;
   z-index: 200;
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+.visual_slide>div>#prev:hover:before,
+.visual_slide>div>#next:hover:before {
+  background-color: #fff;
+  color: rgb(117, 117, 117);
 }
 
 .visual_slide>div>#prev:before {
   content: "\e93c";
   left: 0;
   margin-left: 0.5rem;
+
 }
 
 .visual_slide>div>#next:before {
   content: "\e93f";
   right: 0;
   margin-right: 0.5rem;
+
 }
+
+
 
 /* controller */
 .controller {
@@ -356,7 +350,7 @@ visual_slide>div>#next {}
   margin: 0 5.4rem;
   box-sizing: border-box;
   display: flex;
-  display: flex;
+
   justify-content: space-between;
 }
 

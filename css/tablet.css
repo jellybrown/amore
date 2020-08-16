@@ -1,0 +1,123 @@
+@media (max-width: 1024px) {
+
+
+    header>div {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    header>div>h1 {
+        left: 0.6rem;
+        transform: translateX(0) scale(0.7);
+        top: 1rem;
+    }
+
+    header div>.utils>.lang {
+        display: none;
+    }
+
+    header div>.utils>.util>a:first-child {
+        display: none;
+    }
+
+    header div>.utils>.util {
+        right: 3.8rem;
+        padding: 0;
+        transform: scale(1.5);
+    }
+
+    header div>.utils>.util>.search {}
+
+
+    header {}
+
+
+    .all {
+
+        display: inline-block;
+        top: 1.65rem;
+        right: 3rem;
+        z-index: 20;
+        color: transparent;
+
+        ;
+    }
+
+    .all:after {
+
+        content: "\e91c";
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        font-family: xeicon;
+        position: absolute;
+        right: 0;
+        top: -5px;
+        transform: scale(1.5);
+    }
+
+    .menus>li {
+        display: block;
+    }
+
+    header .nav>nav {
+        position: fixed;
+        width: 30%;
+        height: 100vh;
+        background-color: #ddd;
+        right: 0;
+        top: 0;
+        z-index: 300;
+    }
+
+
+
+
+    header .nav>nav>ul {
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+
+    }
+
+
+
+    header .nav>nav>ul>li {
+        display: block;
+        padding: 0 2rem 0 0.5rem;
+    }
+
+    header .nav>nav>ul>li>a {
+        font-size: 1rem;
+        color: #000;
+    }
+
+
+
+}
+
+header .nav {}
+
+
+
+
+
+header .nav>nav>ul>li:hover>a {
+    color: #c5deff;
+}
+
+header .nav>nav>ul>li:hover>a:after {
+    content: "";
+    position: absolute;
+    background-color: #92b4e2;
+    width: 100%;
+    height: 4px;
+    bottom: -13.5px;
+    left: 0;
+}
