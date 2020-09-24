@@ -3,7 +3,12 @@
   const header = document.querySelectorAll(".header_menu");
   const draw = document.querySelectorAll(".draw_menu");
   const nav = document.querySelector(".nav");
-
+  const headerArea = document.querySelector("header");
+  const allMenu = document.querySelector(".all")
+  const innerNav = nav.querySelector("nav");
+  const bar = document.querySelector(".bar");
+  const close = document.querySelector(".close");
+  const black = document.querySelector(".black_bg");
 
   function overEvent(e) {
     for (let i = 0; i < header.length; i++) {
@@ -23,4 +28,36 @@
     draw[i].addEventListener("mouseleave", outEvent);
 
   }
+
+  window.addEventListener("scroll", function () {
+    if (this.pageYOffset > 50) {
+      headerArea.classList.add("down")
+    } else {
+      headerArea.classList.remove("down")
+    }
+  })
+
+  bar.style.opacity = '100%'; //bar 기본으로 투명도 1
+
+  //메뉴를 클릭하면 (tablet 버전)
+  allMenu.addEventListener("click", function (e) {
+    e.preventDefault();
+    innerNav.classList.toggle("active");
+    if (innerNav.classList.contains("active")) {
+      bar.style.opacity = 0;
+      close.style.opacity = "100%";
+      close.style.color = "black";
+      black.style.visibility = "visible";
+
+    } else {
+      close.style.opacity = 0;
+      bar.style.opacity = "100%";
+      black.style.visibility = "hidden";
+    }
+
+  })
+
+
+
+
 })();

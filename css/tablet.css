@@ -1,6 +1,36 @@
 @media (max-width: 1024px) {
 
 
+    header {
+        height: 3rem;
+    }
+
+    header.down {
+        top: 0;
+    }
+
+    header.down:after {
+        content: "";
+        background: url(../images/amorepacific_s.png) no-repeat;
+        position: fixed;
+        width: 300px;
+        height: 30px;
+        right: 36px;
+        top: 10px;
+        z-index: 500;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    header.down div>h1 {
+
+        color: #fff;
+        position: fixed;
+        left: 0.6rem;
+        top: 1rem;
+        transform: scale(0.7);
+    }
+
     header>div {
         width: 100%;
         height: 100%;
@@ -27,35 +57,38 @@
         transform: scale(1.5);
     }
 
-    header div>.utils>.util>.search {}
 
-
-    header {}
-
-
-    .all {
+    a.all {
 
         display: inline-block;
-        top: 1.65rem;
-        right: 3rem;
-        z-index: 20;
-        color: transparent;
-
-        ;
+        width: 50px;
+        height: 50px;
+        z-index: 700;
+        color: #fff;
+        position: fixed;
+        z-index: 6000;
+        left: 95%;
+        top: 15px;
     }
 
-    .all:after {
-
-        content: "\e91c";
-        color: #fff;
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        font-family: xeicon;
+    .all span {
         position: absolute;
-        right: 0;
-        top: -5px;
-        transform: scale(1.5);
+        left: 0;
+        top: 0;
+        opacity: 0;
+
+    }
+
+
+    .all.active:before {
+        position: absolute;
+        right: -28px;
+        bottom: 4px;
+        content: "";
+        height: 1px;
+        width: 237px;
+        border-bottom: 1px solid #ddd;
+
     }
 
     .menus>li {
@@ -64,14 +97,19 @@
 
     header .nav>nav {
         position: fixed;
-        width: 30%;
+        width: 290px;
         height: 100vh;
-        background-color: #ddd;
-        right: 0;
+        background-color: #fff;
+        right: -290px;
         top: 0;
         z-index: 300;
+        text-align: left;
+        transition: 1s;
     }
 
+    header .nav>nav.active {
+        right: 0;
+    }
 
 
 
@@ -82,42 +120,82 @@
         width: 100%;
         height: 100%;
         text-align: center;
-
-
+        margin-top: 30px;
     }
 
 
 
     header .nav>nav>ul>li {
         display: block;
-        padding: 0 2rem 0 0.5rem;
+        padding: 0;
+        text-align: left;
+        height: 52px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+
     }
 
     header .nav>nav>ul>li>a {
-        font-size: 1rem;
+
         color: #000;
+        font-family: "Nanum Gothic",
+            serif;
+        font-size: 0.65rem;
+        display: block;
+        width: 80%;
+        height: 100%;
+        line-height: 52px;
+        margin: 0 auto;
+        border-bottom: 1px solid #ddd;
+    }
+
+    header .nav>nav>ul>li>a:after {}
+
+    .header_menu.on>.draw_menu {
+        display: none;
+    }
+
+    header .nav>nav>ul>li:hover>a {
+        color: #000 !important;
     }
 
 
+    header .nav>nav>ul>li:hover>a:after {
+        display: none;
+    }
 
-}
-
-header .nav {}
-
-
+    .controller>div>ul>li {
+        font-size: 0.8rem;
+        width: 25%;
 
 
+    }
 
-header .nav>nav>ul>li:hover>a {
-    color: #c5deff;
-}
+    .controller>div>ul>li>a {
+        width: 80%;
+        white-space: normal;
+        padding: 1rem 0;
+        margin: 0 auto;
+    }
 
-header .nav>nav>ul>li:hover>a:after {
-    content: "";
-    position: absolute;
-    background-color: #92b4e2;
-    width: 100%;
-    height: 4px;
-    bottom: -13.5px;
-    left: 0;
-}
+    .close,
+    .bar {
+        transition: 1s;
+        transition-delay: 0.3s;
+    }
+
+    .home_news {
+        height: 55.5rem;
+    }
+
+    .home_news div .list ul li {
+        font-size: 0.85rem;
+        display: inline-block;
+        width: 42%;
+
+        box-sizing: border-box;
+        margin: 0 auto 70px;
+
+
+    }
