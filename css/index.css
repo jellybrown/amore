@@ -160,20 +160,10 @@ header .nav>nav>ul>li:hover>a {
 header div .utils>.util>.search {
   display: block;
   position: relative;
-  color: transparent;
+  color: #fff;
   cursor: pointer;
 }
 
-header div .utils>.util>.search:after {
-  display: inline-block;
-  content: "\e97a";
-  font-family: "xeicon";
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #fff;
-
-}
 
 /* 헤더영역: 드로우 메뉴 */
 
@@ -231,11 +221,6 @@ header div .utils>.util>.search:after {
   margin: 1rem 0 0 0;
 }
 
-.draw_menu .left>a:after {
-  content: "\e93e";
-  font-family: "xeicon";
-  padding-left: 0.2rem;
-}
 
 .draw_menu>ul {
   width: 60%;
@@ -307,13 +292,7 @@ header div .utils>.util>.search:after {
   color: #000;
 }
 
-.draw_menu>.brand_img li:last-child>a:after {
-  content: "\e93f";
-  font-family: "xeicon";
-  position: absolute;
-  top: 10%;
-  right: -30%;
-}
+
 
 /* 슬라이드 영역 */
 .visual_slide {
@@ -331,9 +310,11 @@ header div .utils>.util>.search:after {
 }
 
 
-.visual_slide>div>#prev:before,
-.visual_slide>div>#next:before {
-  font-family: "xeicon";
+.visual_slide>div>#prev,
+.visual_slide>div>#next {
+  width: 30px;
+  height: 30px;
+  text-align: center;
   color: #fff;
   border: 1px solid rgb(175, 175, 175);
   padding: 0.5rem;
@@ -345,20 +326,20 @@ header div .utils>.util>.search:after {
   transition: 0.2s;
 }
 
-.visual_slide>div>#prev:hover:before,
-.visual_slide>div>#next:hover:before {
+.visual_slide>div>#prev:hover,
+.visual_slide>div>#next:hover {
   background-color: #fff;
   color: rgb(117, 117, 117);
 }
 
-.visual_slide>div>#prev:before {
-  content: "\e93c";
+.visual_slide>div>#prev {
+
   left: 0;
   margin-left: 0.5rem;
 }
 
-.visual_slide>div>#next:before {
-  content: "\e93f";
+.visual_slide>div>#next {
+
   right: 0;
   margin-right: 0.5rem;
 }
