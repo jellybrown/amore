@@ -29,6 +29,7 @@
 
   }
 
+  // 스크롤시 상단 메뉴바 고정
   window.addEventListener("scroll", function () {
     if (this.pageYOffset > 50) {
       headerArea.classList.add("down")
@@ -37,7 +38,8 @@
     }
   })
 
-  bar.style.opacity = '100%'; //bar 기본으로 투명도 1
+  //bar 기본으로 투명도 1
+  bar.style.opacity = '100%';
 
   //메뉴를 클릭하면 (tablet 버전)
   allMenu.addEventListener("click", function (e) {
@@ -56,6 +58,7 @@
     }
 
   })
+
 
 
 
